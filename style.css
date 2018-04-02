@@ -269,11 +269,19 @@ button:hover {
 
 .category-menu a {
     font-size: 18px;
+    padding: 5px 10px;
 }
 
 .category-menu a:link,
 .category-menu a:visited {
     color: #E94B3C;
+}
+
+.category-menu a:hover {
+    background: #E94B3C;
+    color: #fff;
+    border-radius: 2px;
+
 }
 
 .category-menu .menu-con > div {
@@ -416,6 +424,11 @@ button:hover {
 
 .footer-item:nth-child(2) ul {
     padding-bottom: 20px;
+}
+
+.footer-item:nth-child(2) p {
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* Page Container */
