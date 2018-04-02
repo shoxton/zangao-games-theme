@@ -15,7 +15,8 @@
         <div class="single-header">
             <h2><?php the_title(); ?></h2>
             <div class="single-meta">
-                <span><?php the_time('j \d\e F'); ?> | por <?php the_author_posts_link(); ?> </span><span class="category-link"><?php the_category(' ');?></span>
+                <span><?php the_time('j \d\e F'); ?> | por <?php the_author_posts_link(); ?> </span>
+                <span class="category-link"><?php the_category(' ');?></span>
             </div>
         </div>
         <div class="single-text">

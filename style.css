@@ -531,6 +531,10 @@ button:hover {
     padding: 20px;
 }
 
+@media screen and (max-width: 1024px) {
+    .single-text{margin-bottom: 20px;}
+}
+
 .single-header {
     margin-bottom: 20px;
     box-shadow: inset 0 -10px 0  #E94B3C;
@@ -546,6 +550,10 @@ button:hover {
     color: #a3a3a3;
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+    .single-header .single-meta, .single-header .single-meta span {display: block;}
 }
 
 /* Search */
