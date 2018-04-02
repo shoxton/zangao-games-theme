@@ -382,8 +382,13 @@ img {
     color: #fff;
 }
 
-.bottom-footer span {
-    font-size: 12px;
+.bottom-footer span, .bottom-footer span a {
+    font-size: 12px!important;
+}
+
+.bottom-footer span a {
+    font-weight: bold;
+    color: #e7d126;
 }
 
 .footer-item {

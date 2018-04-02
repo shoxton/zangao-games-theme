@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="bottom-footer text-center">
-            <span>Created by kaiteN | <?php bloginfo('name'); ?> - &copy; <?= date('Y'); ?></span>
+            <span>Created by <a href="https://github.com/shoxton" target="_blank">kaiteN</a> | <a href="https://www.youtube.com/channel/UC8racR0Ko9HzKpIBAPvifKw" target="_blank"><?php bloginfo('name'); ?></a> &copy; <?= date('Y'); ?></span>
         </div>
 
     </footer>
