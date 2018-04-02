@@ -21,9 +21,9 @@ add_action('wp_enqueue_scripts', 'theme_js');
 // Nav Menus
 
 register_nav_menus(array(
-    'primary' => 'Primary Menu',
-    'category' => 'Category Menu',
-    'footer' => 'Footer Menu'
+    'primary' => 'Menu Primário',
+    'category' => 'Menu Categorias',
+    'footer' => 'Menu Rodapé'
 ));
 
 add_theme_support( 'post-thumbnails' ); 

@@ -114,6 +114,21 @@ img {
     height: auto;
 }
 
+button {
+    background: #E94B3C;
+    padding: 10px 25px;
+    border: none;
+    color: #fff;
+    text-shadow: 0 2px 3px rgba(0,0,0,.1);
+    line-height: 1;
+    text-transform: uppercase!important;
+    transition: .2s ease;
+}
+
+button:hover {
+    background: #d92919;
+}
+
 .horizontal-menu ul {
     display: flex;
     flex-wrap: wrap;
@@ -392,6 +407,14 @@ img {
 }
 
 .footer-item {
+    padding-bottom: 20px;
+}
+
+.footer-item:nth-child(1) ul.menu {
+    column-count: 2;
+}
+
+.footer-item:nth-child(2) ul {
     padding-bottom: 20px;
 }
 

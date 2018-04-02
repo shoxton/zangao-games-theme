@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="menu-con custom-link">
                     <div class="brand">
-                        <span><a href="http://zangaogames.local/"><?php bloginfo('name'); ?></a></span>
+                        <span><a href="http://zangaogames.local/"><i class="fas fa-arrow-left"></i>&nbsp;Voltar ao site</a></span>
                     </div>
                     
                     <div class="menu-links horizontal-menu">
@@ -34,13 +34,15 @@
             <div class="site-header-banner" style="background: url(<?php header_image(); ?>);"></div>
             <div class="site-header-content custom-link">
                 <div class="site-header-text">
-                    <?php if( is_category()) : ?>
+                    <?php if( is_category()) { ?>
                         <a href="<?php echo home_url(); ?>"><h1><?php single_cat_title(); ?></h1></a>
                         <h5><?php echo category_description(); ?></h5>
-                        <?php else : ?>   
+                    <?php } elseif (is_page()) { ?>
+                        <a href="<?php echo home_url(); ?>"><h1><?php the_title(); ?></h1></a>
+                    <?php } else { ?>   
                         <a href="<?php echo home_url(); ?>"><h1><?php bloginfo('name'); ?></h1></a>
                         <h5><?php bloginfo('description'); ?></h5>
-                    <?php endif; ?>
+                    <?php }  ?>
                 </div>
             </div>
         </div>
