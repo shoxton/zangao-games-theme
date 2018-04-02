@@ -1,5 +1,4 @@
 <?php if (is_page()) { ?>
-    <h2><?php the_title(); ?></h2>
     <p><?php the_content(); ?></p>
 
 <?php } elseif (is_single()) { ?>
@@ -21,7 +20,7 @@
         </div>
         <div class="single-text">
             <?php the_content(); ?>
-            <?php echo "DONT FORGET TO ADD POST TAGS HERE"; ?>
+            <?php the_tags() ; ?>
         </div>
 
     </article>
