@@ -55,11 +55,12 @@
                                 'theme_location' => 'category'
                             );
                         ?>
-                        <?php wp_nav_menu( $args ); ?>
+                        <?php wp_nav_menu( $args ); ?> 
                     </div>
+                    <button id="search-mobile-icon" href=""><i class="fas fa-search"></i></button> 
                     <div class="search-bar">
                         <?php get_search_form(); ?>
-                    </div>                    
+                    </div>                  
                 </div>
             </div>
         </nav>                    

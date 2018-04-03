@@ -3,7 +3,13 @@
         $('.menu-links').toggleClass('mobile-open');
     })
 
-    $(window).on('scroll', debounce(stickyNav, 50, false));
+    $('#search-mobile-icon').click(function() {
+        $('.search-bar').toggleClass('search-bar-open');
+        $('svg', this).toggleClass("fa-search fa-times");
+    })
+
+
+    $(window).on('scroll', debounce(stickyNav, 50, true));
 
     var header = document.getElementById("sticky-nav");
 
