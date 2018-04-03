@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="menu-con custom-link">
                     <div class="brand">
-                        <span><a href="http://zangaogames.local/"><i class="fas fa-arrow-left"></i>&nbsp;Voltar ao site</a></span>
+                        <span><a href="http://zangaogames.local/"><i class="fas fa-arrow-left"></i>&nbsp;Voltar ao site</a></span> 
                     </div>
                     
                     <div class="menu-links horizontal-menu">

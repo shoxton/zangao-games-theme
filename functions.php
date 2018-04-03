@@ -18,34 +18,45 @@ function theme_js() {
 add_action('wp_enqueue_scripts', 'theme_js');
 
 
-// Nav Menus
+function theme_setup() {
 
-register_nav_menus(array(
-    'primary' => 'Menu Primário',
-    'category' => 'Menu Categorias',
-    'footer' => 'Menu Rodapé'
-));
+    // Nav Menus
+    register_nav_menus(array(
+        'primary' => 'Menu Primário',
+        'category' => 'Menu Categorias',
+        'footer' => 'Menu Rodapé'
+    ));
 
-add_theme_support( 'post-thumbnails' ); 
-add_image_size( 'small_thumbnail', 280,200, true);
-add_image_size( 'banner_image', 920,300, true);
+    // Posts Images
+    add_theme_support( 'post-thumbnails' ); 
+    add_image_size( 'small_thumbnail', 280,200, true);
+    add_image_size( 'banner_image', 920,300, true);
 
-// Posts
+    // Add Header Support
+    $headerDefaults = array(
+        'flex-width'    => true,
+        'width'         => 9999,
+        'flex-height'   => true,
+        'height'        => 500,
+        'default-image' => get_template_directory_uri() . '/images/header.jpg',
+        'uploads'       => true,
+    );
+    add_theme_support( 'custom-header', $headerDefaults );
 
-/**
- * Filter the except length to 10 words.
- *
- * @param int $length Excerpt length.
- * @return int (Maybe) modified excerpt length.
- */
-function wpdocs_custom_excerpt_length( $length ) {
-    return 10;
 }
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+add_action('after_setup_theme', 'theme_setup');
+
+
+// Filter the except length to x words.
+function custom_excerpt_length() {
+    return 15;
+}
+
+add_filter( 'excerpt_length', 'custom_excerpt_length');
 
 
 // Widgets
-
 function loadWidgets() {
     register_sidebar( array(
         'name' => 'Widget Lateral',
@@ -60,26 +71,19 @@ function loadWidgets() {
 
 add_action('widgets_init', 'loadWidgets');
 
+
 //Exclude pages from WordPress Search
 if (!is_admin()) {
     function wpb_search_filter($query) {
-    if ($query->is_search) {
-    $query->set('post_type', 'post');
+        if ($query->is_search) {
+            $query->set('post_type', 'post');
+        }
+        return $query;
     }
-    return $query;
-    }
+
     add_filter('pre_get_posts','wpb_search_filter');
-    };
 
-// Add Header Support
+};
 
-$defaults = array(
-	'flex-width'    => true,
-	'width'         => 9999,
-	'flex-height'   => true,
-	'height'        => 500,
-    'default-image' => get_template_directory_uri() . '/images/header.jpg',
-    'uploads'       => true,
-);
-add_theme_support( 'custom-header', $defaults );
+
 
