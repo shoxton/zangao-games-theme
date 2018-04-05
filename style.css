@@ -93,6 +93,13 @@ a img {
 
 /* General style */
 
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -114,8 +121,8 @@ span {font-size: 14px; color: #a1a1a1;}
 }
 
 img {
-    width: 100%;
     height: auto;
+    max-width: 100%;
 }
 
 button {
@@ -505,6 +512,10 @@ button:hover {
     position: relative;
 }
 
+.post-thumbnail img {
+    width: 100%;
+}
+
 .col-margin {
     margin-bottom: 30px;
 }
@@ -550,8 +561,18 @@ button:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, .1);
 }
 
+.single-banner img {
+    width: 100%;
+}
+
 .single-text {
     padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .single-text {
+        padding: 20px 40px;
+    }
 }
 
 @media screen and (max-width: 1024px) {

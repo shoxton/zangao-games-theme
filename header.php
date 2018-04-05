@@ -3,7 +3,6 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php bloginfo('name');?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
 </head>
@@ -15,7 +14,7 @@
             <div class="container">
                 <div class="menu-con custom-link">
                     <div class="brand">
-                        <span><a href="http://zangaogames.local/"><i class="fas fa-arrow-left"></i>&nbsp;Voltar ao site</a></span> 
+                        <span><a href="https://zangaogames.wdkdev.site/">Voltar ao site</a></span> 
                     </div>
                     
                     <div class="menu-links horizontal-menu">
