@@ -21,14 +21,14 @@
 
             <?php endif; ?>
             </div>
-
+            
             <div class="pagination">
                 <?php echo paginate_links(); ?>
             </div>
 
-        </div>
         <div class="col-12 col-lg-4 col-xl-3">
             <?php dynamic_sidebar('asidewidget'); ?>
+        </div>
         </div>
     </div>
 </div>
