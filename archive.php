@@ -2,7 +2,7 @@
 
 <div class="page-con container">
     <div class="row">
-        <div class="col-lg-9">
+        <div class="col-12 col-lg-8 col-xl-9">
             <h2 class="archive-posts-header"><?php
                 if ( is_category()) { ?>
                     Postagens de <?php single_cat_title();
@@ -22,7 +22,7 @@
                 <?php if (have_posts()) : ?>
                     
                     <?php while (have_posts()) : the_post(); ?>
-                    <div class="col-12 col-sm-6 col-lg-4 col-margin">
+                    <div class="col-12 col-sm-6 col-lg-6 col-xl-4 col-margin">
                         <?php get_template_part('content'); ?>
                     </div>
 
@@ -41,7 +41,7 @@
             </div>
 
         </div>
-        <div class="col-lg-3">
+        <div class="col-12 col-lg-4 col-xl-3">
             <?php dynamic_sidebar('asidewidget'); ?>
         </div>
     </div>

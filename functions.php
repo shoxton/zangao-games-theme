@@ -8,10 +8,6 @@ function theme_styles() {
 add_action('wp_enqueue_scripts', 'theme_styles');
 
 
-// Enable styles on editor
-add_editor_style( 'custom-editor-style.css' );
-
-
 function theme_js() {
     wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.2.1.slim.min.js');
     wp_enqueue_script('bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
@@ -70,6 +66,9 @@ function theme_setup() {
 	 */
     add_theme_support( 'title-tag' );
 
+    // Enable styles on editor
+    add_editor_style( 'editor-styles.css' );
+
 }
 
 add_action('after_setup_theme', 'theme_setup');
@@ -99,15 +98,14 @@ function loadWidgets() {
 add_action('widgets_init', 'loadWidgets');
 
 
-function theme_widget_tag_cloud_args( $args ) {
-	$args['largest']  = 22;
-	$args['smallest'] = 8;
-	$args['unit']     = 'pt';
-	$args['format']   = 'list';
+function change_tag_cloud_font_sizes( array $args ) {
+    $args['smallest'] = '12';
+    $args['largest'] = '12';
 
-	return $args;
+    return $args;
 }
-add_filter( 'widget_tag_cloud_args', 'theme_widget_tag_cloud_args' );
+
+add_filter( 'widget_tag_cloud_args', 'change_tag_cloud_font_sizes');
 
 //Exclude pages from WordPress Search
 if (!is_admin()) {

@@ -2,12 +2,12 @@
 
     <div class="page-con container">
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-12 col-lg-8 col-xl-9">
                 <div class="d-flex row">
                     <?php if (have_posts()) : ?>
                         
                         <?php while (have_posts()) : the_post(); ?>
-                        <div class="col-12 col-sm-6 col-lg-4 col-margin">
+                        <div class="col-12 col-sm-6 col-lg-6 col-xl-4 col-margin">
                             <?php get_template_part('content'); ?>
                         </div>
 
@@ -26,7 +26,7 @@
                 </div>
                 
             </div>
-            <div class="col-lg-3">
+            <div class="col-12 col-lg-4 col-xl-3">
                 <?php dynamic_sidebar('asidewidget'); ?>
             </div>
         </div>

@@ -21,7 +21,10 @@
         </div>
         <div class="single-text">
             <?php the_content(); ?>
-            <?php the_tags() ; ?>
+            <div class="single-tags">
+                <?php the_tags('','') ; ?>
+            </div>
+            
         </div>
 
     </article>
@@ -44,7 +47,7 @@
         </div>                            
         <div class="post-text">
             <a class="post-title" href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-            <p>
+            <p class="post-resume">
                 <?= get_the_excerpt(); ?><br>
                 <a class="post-excerpt" href="<?php the_permalink(); ?>">Leia mais &raquo;</a>
             </p>

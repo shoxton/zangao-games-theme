@@ -9,7 +9,7 @@
     })
 
 
-    $(window).on('scroll', debounce(stickyNav, 50, true));
+    $(window).on('scroll', debounce(stickyNav, 20, true));
 
     var header = document.getElementById("sticky-nav");
 
