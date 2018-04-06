@@ -732,6 +732,13 @@ li.widget .widgettitle {
     box-shadow: 0 0 15px rgba(0, 0, 0, .1);
     padding: 20px;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-author .author-info .author-desc {
+    padding-left: 20px;
 }
 
 .archive-posts-header {

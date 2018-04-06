@@ -9,9 +9,13 @@
                         $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
                     ?>
                     <div class="author-info">
-                        <a href="<?php echo $curauth->user_url; ?>" target="_blank" ><h4><?php echo $curauth->nickname; ?></h4></a>
-                        
-                        <?php echo $curauth->user_description; ?>
+                        <div class="author-pic">
+                            <?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?>
+                        </div>
+                        <div class="author-desc">
+                            <a href="<?php echo $curauth->user_url; ?>" target="_blank" ><h4><?php echo $curauth->nickname; ?></h4></a>
+                            <?php echo $curauth->user_description; ?>
+                        </div>
                     </div>
 
                 </div>
