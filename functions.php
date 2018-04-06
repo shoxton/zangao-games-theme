@@ -27,7 +27,7 @@ function theme_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'widgets'
 	) );
 
     // Nav Menus
@@ -90,8 +90,13 @@ function loadWidgets() {
     ));
 
     register_sidebar( array(
-        'name' => 'Widget Rodapé',
-        'id' => 'footerwidget'
+        'name' => 'Widget Rodapé 3',
+        'id' => 'footerwidget3'
+    ));
+
+    register_sidebar( array(
+        'name' => 'Widget Rodapé 1',
+        'id' => 'footerwidget1'
     ));
 }
 
