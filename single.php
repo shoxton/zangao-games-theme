@@ -22,19 +22,14 @@
                     </div>
 
             <?php endif; ?>
-
-        </div>
-        <div class="col-12 col-lg-4 col-xl-3">
-            <?php dynamic_sidebar('asidewidget'); ?>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="col-12 col-lg-8 col-xl-9">
         <?php if ( comments_open() || get_comments_number() ) :
             comments_template();
         endif;
         ?>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+            <?php dynamic_sidebar('asidewidget'); ?>
+        </div>
     </div>
 </div>
 
