@@ -62,6 +62,13 @@
                     </div>                  
                 </div>
             </div>
-        </nav>                    
-    </header>
+        </nav>
+        <div class="container" style="padding-top: 40px;">
+            <div class="jumbotron text-center" >
+                <h3>Este site ainda está em desenvolvimento, desculpe qualquer transtorno.</h3>
+                <span>Futuramente você terá acesso a todos tipos de notícias sobre games. Você pode mandar sua sugestão ou seu feedback por <a href="https://zangaogames.wdkdev.site/blog/contact/">aqui</a>.</span>
+            </div> 
+        </div>
+                   
+</header>
 
