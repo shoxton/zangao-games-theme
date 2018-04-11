@@ -56,7 +56,7 @@
                         ?>
                         <?php wp_nav_menu( $args ); ?> 
                     </div>
-                    <button id="search-mobile-icon" href=""><i class="fas fa-search"></i></button> 
+                    <button id="search-mobile-icon"><i class="fas fa-search"></i></button> 
                     <div class="search-bar">
                         <?php get_search_form(); ?>
                     </div>                  
