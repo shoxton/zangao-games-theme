@@ -4,6 +4,8 @@ function theme_styles() {
     wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
     wp_enqueue_style('google-custom-font', '//fonts.googleapis.com/css?family=Roboto:300,400,700|Titillium+Web:300,400,700');
+    wp_enqueue_style('slick-slider-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css');
+    wp_enqueue_style('slick-slider-css2', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css');
 }
 add_action('wp_enqueue_scripts', 'theme_styles');
 
@@ -12,7 +14,8 @@ function theme_js() {
     wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.2.1.slim.min.js');
     wp_enqueue_script('bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
     wp_enqueue_script('font-awesome', '//use.fontawesome.com/releases/v5.0.8/js/all.js');
-    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/main.js', array ( 'jquery' ), 1.1, true);
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/main.js', array ( 'jquery' ), 1.1, true);
+    wp_enqueue_script('slick-slider-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js');
 }
 add_action('wp_enqueue_scripts', 'theme_js');
 
@@ -92,6 +95,11 @@ function loadWidgets() {
     register_sidebar( array(
         'name' => 'Widget Rodapé 3',
         'id' => 'footerwidget3'
+    ));
+
+    register_sidebar( array(
+        'name' => 'Widget Rodapé 2',
+        'id' => 'footerwidget2'
     ));
 
     register_sidebar( array(

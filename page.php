@@ -14,7 +14,7 @@ get_header(); ?>
             <?php endif; ?>
         </div>
         <div class="col-12 col-lg-4 col-xl-3">
-            <?php dynamic_sidebar('asidewidget'); ?>
+            <?php get_template_part('content', 'sidebar'); ?>
         </div>
     </div>
 

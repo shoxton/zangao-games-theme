@@ -121,12 +121,18 @@ p {
 h1 {font-size: 48px;}
 h2 {font-size: 36px;}
 h3 {font-size: 24px;}
-h4 {font-size: 18px;;}
+h4 {font-size: 18px;}
 h5, a {font-size: 16px;}
 p {font-size: 16px; color: #333;line-height: 1.6471}
 
 @media screen and (max-width: 992px) {
     h2 {font-size: 24px!important;}
+}
+
+@media screen and (max-width: 575px) {
+    h1 {
+        font-size: 36px!important;
+    }
 }
 
 img {
@@ -146,6 +152,40 @@ button {
     font-weight: bold;
 }
 
+.yt-button {
+    padding-top: 6%;
+}
+
+.yt-button .button-img {
+    background: rgb(230, 230, 230);
+    border-radius: 100%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border: 5px solid #fff;
+    box-shadow: inset 0 0 30px rgba(0,0,0,.2),
+                0 0 30px rgba(0,0,0,.2);
+}
+
+.yt-button .button-action {
+    margin-top: -40px;
+    width: 100%;
+    text-align: center;
+}
+
+.button-custom {
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 15px 15px 30px rgba(0,0,0,.1),
+                -15px 15px 30px rgba(0,0,0,.1);
+}
+
+.button-custom:hover {
+    box-shadow: 30px 15px 45px rgba(0,0,0,.1),
+                -30px 15px 45px rgba(0,0,0,.1);
+}
+
 button:hover {
     background: #d92919;
 }
@@ -160,8 +200,28 @@ button:hover {
 }
 
 .condense {
-    width: 100%;
-    padding: 0 50px;
+    padding: 20px;
+}
+
+.iframe-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    border: 5px solid #fff;
+}
+
+.iframe-card .iframe-text {
+    padding: 20px;
+}
+
+.iframe-card .iframe-text h5 {
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.wrapper {
+    padding-top: 5%;
+    padding-bottom: 5%; 
 }
 
 .no-results {
@@ -285,9 +345,7 @@ button:hover {
 .category-menu  {
     background: #fff;
     padding: 10px 0;
-    box-shadow: 2px 5px 20px -10px #E94B3C;
-    border-bottom-right-radius: 10%;
-    border-bottom-left-radius: 10%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
 }
 
 .category-menu a {
@@ -444,8 +502,11 @@ button:hover {
     box-shadow: inset 0 5px 15px rgba(0, 0, 0, .1);
 }
 
-.bottom-footer {
-    background: #383838;
+.footer-meta {
+    background: #442244;
+}
+
+.footer-meta a, .footer-meta a:link, .footer-meta a:hover  {
     color: #fff;
 }
 
@@ -484,6 +545,81 @@ button:hover {
 
 /* Posts */
 
+.post-box {
+    width: 100%;
+    height: 200px;
+    background-position: center!important;
+    background-size: cover!important;
+    object-fit: cover;
+    background-repeat: no-repeat!important;
+    position: relative;
+    border-bottom: 5px solid #E94B3C;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    margin-bottom: 15px;
+}
+
+.post-box:last-child {
+    margin-bottom: 0;
+}
+
+.post-box-full-height {
+    height: 100%;
+    width: 200px;
+    flex: 1;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 992px) {
+    .post-box-full-height {
+        height: 600px;
+    }
+
+    .aside-news-col {
+        padding: 0!important;
+    }
+} 
+
+@media screen and (max-width: 575px) {
+    .post-box-full-height {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.full-height-posts-row {
+    height: 100%;
+}
+@media screen and (max-width: 575px) {
+    .full-height-posts-row {
+        flex-direction: column;
+    }
+}
+
+.aside-news-col {
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.post-box-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,1), rgba(0,0,0,.2));
+}
+
+.post-box-title {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.post-box-title h3 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+}
+
 .post-list-item {
     display: flex;
     justify-content: space-between;
@@ -493,10 +629,7 @@ button:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, .1);
     height: 100%;
     border-bottom: 10px solid #E94B3C;
-}
-
-.post a:hover {
-    text-decoration: none;
+    background: #fff;
 }
 
 .post .post-text a.post-title,
@@ -505,14 +638,14 @@ button:hover {
     color: #383838;
 }
 
-.post .post-text h3 {
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
+.post .post-text a.post-title:hover {
+    text-decoration-color: #007bff;
 }
 
-.post .post-text a.post-title:hover {
-    color: #d92919;
+.post .post-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .post .post-text a.post-excerpt:link,
@@ -593,6 +726,174 @@ button:hover {
     }
 }
 
+/* Highlights Carousel*/
+
+.highlight-carousel {
+    width: 100%;
+    height: 60vh;
+}
+
+.slick-slider {
+    margin-bottom: 0!important;
+}
+
+.highlight-carousel .slick-list .slick-track,
+.highlight-carousel .slick-list {
+    height: 100%;
+    width: 100%;
+}
+
+.highlight-carousel button.slick-arrow {
+    z-index: 25;
+}
+
+.highlight-carousel button.slick-next {
+    right: 25px;
+}
+
+.highlight-carousel button.slick-prev {
+    left: 25px;
+}
+
+.highlight-item {
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+
+.item-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0,0,0,.2));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-content {
+    max-width: 50%;
+}
+
+.highlight-title {
+    position: relative;
+}
+
+.highlight-title h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.highlight-title:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 10px;
+    background-color: #E94B3C;
+}
+
+.highlight-description h4 {
+    padding: 4% 0 2%;
+    color: #fff;
+    font-weight: bold;
+    text-transform: initial;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 575px) {
+    .highlight-description h4  {
+        font-size: 16px;
+    }
+
+    .item-content {
+        max-width: 75%;
+    }
+}
+
+.highlight-action {}
+
+/* Front page */
+
+.call-to-channel {
+    background: linear-gradient(to right, #E94B3C 50%,#442244 50% );
+}
+
+@media screen and (max-width: 768px) {
+    .call-to-channel {
+        background: linear-gradient(to bottom, #E94B3C 50%,#442244 50% );
+    }
+}
+
+.call-to-channel .last-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.section-title {
+    padding-bottom: 4%;
+}
+
+.section-title h2 {
+    position: relative;
+    font-weight: bold;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    background-color: #E94B3C;
+}
+
+.call-to-channel .section-title h2 {
+    color: #fff;
+}
+
+.call-to-channel .section-title {
+    text-align: center;
+}
+.call-to-channel .section-title:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.videos .section-title {
+    position: relative;
+}
+
+.videos .section-title h2 {
+    color: #424242;
+}
+
+.videos .videos-container .yottie-widget-video {
+    border-bottom: 5px solid #E94B3C;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+}
+
+.news {
+    background: #442244;
+}
+
+.news-container {
+    height: 100%;
+    padding: 15px;
+}
+
+.news .section-title h2 {
+    color: #fff;
+}
+
 /* Single */
 
 .single {
@@ -648,10 +949,10 @@ button:hover {
 .input-con #s {
     border: none;
     padding: 10px 15px;
-    background: #d92919;
+    background: #E94B3C;
     color: #fff;
     outline: none;
-    border: 2px solid #d92919;
+    border: 2px solid #E94B3C;
     width: 100%;
 }
 
@@ -661,10 +962,10 @@ button:hover {
 
 .input-con #submit-btn {
     padding: 10px 15px;
-    border: 2px solid #d92919;
+    border: 2px solid #E94B3C;
     outline: none;
     background: #fff;
-    color: #d92919;
+    color: #E94B3C;
     font-weight: bold;
     cursor: pointer;
 }
@@ -678,7 +979,7 @@ button:hover {
 
 li.widget {
     list-style: none;
-    border-bottom: 5px solid #d92919;
+    border-bottom: 5px solid #E94B3C;
     margin-bottom: 10px;
     padding: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, .1);

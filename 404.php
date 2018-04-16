@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-9">
             <div class="no-results">
-                <p>Ooops, parece que esta página não existe ou foi excluída</p>
+                <p>Ooops, parece que esta página não existe ou foi removida.</p>
                 <span>Desculpe o transtorno. Tente acessar a <a href="<?php echo home_url(); ?>"> página inicial</a>.</span>
                 <div class="sad-face">
                     <i class="far fa-frown"></i>

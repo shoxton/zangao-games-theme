@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="menu-con custom-link">
                     <div class="brand">
-                        <span><a href="https://zangaogames.wdkdev.site/">Voltar ao site</a></span> 
+                        <span><a href="<?php home_url() ;?>"><?php bloginfo('name') ; ?></a></span> 
                     </div>
                     
                     <div class="menu-links horizontal-menu">
@@ -29,22 +29,7 @@
                 </div>
             </div>
         </nav>
-        <div class="site-header">
-            <div class="site-header-banner" style="background: url(<?php header_image(); ?>);"></div>
-            <div class="site-header-content custom-link">
-                <div class="site-header-text">
-                    <?php if( is_category()) { ?>
-                        <a href="<?php echo home_url(); ?>"><h1><?php single_cat_title(); ?></h1></a>
-                        <h5><?php echo category_description(); ?></h5>
-                    <?php } elseif (is_page()) { ?>
-                        <a href="<?php echo home_url(); ?>"><h1><?php the_title(); ?></h1></a>
-                    <?php } else { ?>   
-                        <a href="<?php echo home_url(); ?>"><h1><?php bloginfo('name'); ?></h1></a>
-                        <h5><?php bloginfo('description'); ?></h5>
-                    <?php }  ?>
-                </div>
-            </div>
-        </div>
+        <?php get_template_part('content', 'header') ; ?>
         <nav id="sticky-nav" class="category-menu custom-link">
             <div class="container">
                 <div class="menu-con">
@@ -63,12 +48,12 @@
                 </div>
             </div>
         </nav>
-        <div class="container" style="padding-top: 40px;">
+        <!-- <div class="container" style="padding-top: 40px;">
             <div class="jumbotron text-center" >
                 <h3>Este site ainda está em desenvolvimento, desculpe qualquer transtorno.</h3>
                 <span>Futuramente você terá acesso a todos tipos de notícias sobre games. Você pode mandar sua sugestão ou seu feedback por <a href="https://zangaogames.wdkdev.site/blog/contact/">aqui</a>.</span>
             </div> 
-        </div>
+        </div> -->
                    
 </header>
 

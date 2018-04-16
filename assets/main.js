@@ -8,6 +8,10 @@
         $('svg', this).toggleClass("fa-search fa-times");
     })
 
+    $(document).ready(function(){
+        $('.highlight-carousel').slick()
+      });
+
 
     $(window).on('scroll', debounce(stickyNav, 20, true));
 
