@@ -570,6 +570,12 @@ button:hover {
     font-weight: bold;
 }
 
+.site-footer-meta{
+    font-size: 12px;
+    color: #fff!important;
+    font-weight: lighter;
+}
+
 /* Page Container */
 
 .page-con {

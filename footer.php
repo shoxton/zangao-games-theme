@@ -30,7 +30,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="site-meta"><?php bloginfo('name'); ?> &copy; <?php date('Y'); ?></span>
+                        <span class="site-footer-meta"><?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?> - Desenvolvido por kaiten</span>
                     </div>
                 </div>
             </div>
