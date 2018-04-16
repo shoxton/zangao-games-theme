@@ -6,12 +6,8 @@
                     <div class="col-md-6">
                         <div class="first-col">
                             <div class="condense">
-                                <div class="iframe-card">
-                                    <iframe width="100%" height="280" src="https://www.youtube.com/embed/Sqk2eQWGpgw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                    <div class="iframe-text">
-                                        <h5>Titulo do vídeo</h5>
-                                        <a href="">Assistir no youtube</a>
-                                    </div>    
+                                <div id ="live-container" class="iframe-card">
+                                    <div class="iframe-text"></div>    
                                 </div>
                             </div>
                         </div>
@@ -23,8 +19,8 @@
                                     <h2>Fique por dentro das novidades do canal</h2>
                                 </div>
                                 <div class="yt-button">
-                                    <div class="button-img">
-                                        <img src="" alt="" width="100%" height="100%">
+                                    <div id="channel-thumb" class="button-img">
+                                        
                                     </div>
                                     <div class="button-action">
                                         <a href="https://www.youtube.com/channel/UC8racR0Ko9HzKpIBAPvifKw?sub_confirmation=1" target="_blank"><button class="button-custom">Increver-se</button></a>
@@ -43,9 +39,8 @@
                 <div class="section-title">
                     <h2>No canal</h2>
                 </div>
-                <div class="videos-container">
-                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                    <div class="elfsight-app-eb7c57ae-e918-43fe-a9cb-2cbf0c561b59"></div>
+                <div id="videos-container" class="row">
+                
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="menu-con custom-link">
                     <div class="brand">
-                        <span><a href="<?php home_url() ;?>"><?php bloginfo('name') ; ?></a></span> 
+                        <span><a href="<?php echo home_url() ;?>"><?php bloginfo('name') ; ?></a></span> 
                     </div>
                     
                     <div class="menu-links horizontal-menu">

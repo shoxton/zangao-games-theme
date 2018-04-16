@@ -15,7 +15,7 @@
                 } elseif ( is_year()) {
                     echo "Postagens de " . get_the_date('Y');
                 } else {
-                    
+                    echo "Postagens";
                 }
             ;?></h2>
             <div class="d-flex row">

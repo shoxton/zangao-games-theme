@@ -1,33 +1,35 @@
 (function($) {
+
+    //Mobile Menu
     $('#mobile-menu-icon').click(function() {
         $('.menu-links').toggleClass('mobile-open');
     })
 
+    //Mobile Search
     $('#search-mobile-icon').click(function() {
         $('.search-bar').toggleClass('search-bar-open');
         $('svg', this).toggleClass("fa-search fa-times");
     })
 
+    //Slider
     $(document).ready(function(){
-        $('.highlight-carousel').slick()
+        $('.highlight-carousel').slick({
+            autoplay:true,
+            autoplaySpeed:4000,
+        })
       });
 
-
+    //Stick Nav
     $(window).on('scroll', debounce(stickyNav, 20, true));
 
     var header = document.getElementById("sticky-nav");
-
-    // Get the offset position of the navbar
     var sticky = header.offsetTop;
-
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function stickyNav() {
-    if (window.pageYOffset >= sticky) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
-    console.log('functions executed');
+        if (window.pageYOffset >= sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
     }
 
     function debounce(func, wait, immediate) {

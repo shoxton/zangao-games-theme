@@ -1,6 +1,7 @@
 <?php 
     $recentNews = new WP_Query('cat=10&posts_per_page=4');
 ?>
+<h2 class="archive-posts-header">Posts recentes</h2>
 <?php if($recentNews->have_posts()) : ?>
     <?php while ($recentNews->have_posts()) : $recentNews->the_post(); ?>
     <div style="background: url(<?php the_post_thumbnail_url(); ?>);" class="post-box">

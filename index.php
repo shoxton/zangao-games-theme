@@ -3,6 +3,7 @@
     <div class="page-con container">
         <div class="row">
             <div class="col-12 col-lg-8 col-xl-9">
+                <h2 class="archive-posts-header">Postagens</h2>
                 <div class="d-flex row">
                     <?php if (have_posts()) : ?>
                         
