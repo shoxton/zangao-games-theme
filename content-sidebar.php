@@ -1,5 +1,9 @@
-<?php 
-    $recentNews = new WP_Query('cat=10&posts_per_page=4');
+<?php
+    $args = array(
+        'posts_per_page' => 3,
+        'orderby'        => 'most_recent'
+    ); 
+    $recentNews = new WP_Query($args);
 ?>
 <h2 class="archive-posts-header">Posts recentes</h2>
 <?php if($recentNews->have_posts()) : ?>
