@@ -222,7 +222,7 @@ button:hover {
 
 .iframe-card {
     background: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
     border: 5px solid #fff;
 }
 
@@ -233,7 +233,11 @@ button:hover {
 }
 
 .iframe-card .iframe-text {
-    padding: 5px 15px;
+    padding: 5px 15px 10px;
+}
+
+.iframe-card .iframe-text a:last-child {
+    color: #E94B3C;
 }
 
 .iframe-card .iframe-text a:first-child {
@@ -242,8 +246,7 @@ button:hover {
 }
 
 .iframe-card .iframe-text a:first-child:hover {
-    text-decoration: underline;
-    text-decoration-color: #007bff;
+    color: #000;
 }
 
 .iframe-card .iframe-text h4 {
@@ -261,15 +264,19 @@ button:hover {
 .no-results {
     padding: 20px;
     text-align: center;
+    background: #fff;
 }
 
 .no-results p {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 24px;
+    line-height: 1;
 }
 
 .no-results span {
-    font-size: 16px;
+    font-size: 14px;
+    color: #a1a1a1;
+    line-height: 1;
 }
 
 .no-results .sad-face {
@@ -922,9 +929,8 @@ button:hover {
     color: #424242;
 }
 
-.videos .videos-container .yottie-widget-video {
+.videos .iframe-card {
     border-bottom: 5px solid #E94B3C;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 }
 
 #live-container {
@@ -932,13 +938,14 @@ button:hover {
 }
 
 .video-tag {
-    padding: 0 5px;
-    margin-top: -32px;
-    left: -5px;
+    padding: 10px 15px;
+    margin-top: -25px;
+    left: 10px;
     position: absolute;
     background: #fff;
     display: flex;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 }
 
 .video-tag #live-on-icon {
@@ -952,6 +959,12 @@ button:hover {
     text-transform: uppercase;
     color: #E94B3C;
     font-size: 14px;
+}
+
+@media screen and (max-width: 575px) {
+    .video-tag span {
+        font-size: 12px;
+    }
 }
 
 .news {

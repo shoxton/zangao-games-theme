@@ -64,7 +64,7 @@
                                     '<iframe width="100%" height="280" src="https://www.youtube.com/embed/' + defaultData[0].contentDetails.upload.videoId + '?autoplay=1" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
                                     '<div class="iframe-text">'+
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=' + defaultData[0].contentDetails.upload.videoId + '">' + '<h4 class="ellipsis">' + defaultData[0].snippet.title + '</h4>' + '</a>' + 
-                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + defaultData[0].contentDetails.upload.videoId + '">Assistir no youtube</a>'+ 
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + defaultData[0].contentDetails.upload.videoId + '">Assistir no youtube	&rarr;</a>'+ 
                                     '</div>';
                 }
 
@@ -100,11 +100,11 @@
             function createLiveHtml(liveData) {
                 var liveString = '';
                 for(var i=0; i<liveData.length; i++) {
-                    liveString +=   '<div class="video-tag">' + '<div id="live-on-icon"></div>' + '<span>ao vivo</span>' + '</div>'+
+                    liveString +=   '<div class="video-tag">' + '<div id="live-on-icon"><i class="fas fa-circle"></i></div>' + '<span>ao vivo</span>' + '</div>'+
                                     '<iframe width="100%" height="280" src="https://www.youtube.com/embed/' + liveData[i].id.videoId + '?autoplay=1" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
                                     '<div class="iframe-text">'+
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=' + liveData[i].id.videoId + '">' + '<h4 class="ellipsis">' + liveData[i].snippet.title + '</h4>' + '</a>' + 
-                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + liveData[i].id.videoId + '">Assistir no youtube</a>'+ 
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + liveData[i].id.videoId + '">Assistir no youtube &rarr;</a>'+ 
                                     '</div>';
                 }
 
@@ -141,7 +141,7 @@
                                     '<iframe width="100%" height="150" src="https://www.youtube.com/embed/' + videosData[i].contentDetails.upload.videoId + '" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
                                     '<div class="iframe-text">'+
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=' + videosData[i].contentDetails.upload.videoId + '">' + '<h4 class="ellipsis">' + videosData[i].snippet.title + '</h4>' + '</a>' + 
-                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + videosData[i].contentDetails.upload.videoId + '">Assistir no youtube</a>'+ 
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + videosData[i].contentDetails.upload.videoId + '">Assistir no youtube &rarr;</a>'+ 
                                     '</div>'+
                                     '</div>'+
                                     '</div>';
