@@ -21,10 +21,9 @@
         </div>
         <div class="single-text">
             <?php the_content(); ?>
-            <div class="single-tags">
-                <?php the_tags('','') ; ?>
-            </div>
-            
+        </div>
+        <div class="single-tags">
+            <?php the_tags('','') ; ?>
         </div>
 
     </article>

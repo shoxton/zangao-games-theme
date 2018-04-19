@@ -30,7 +30,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="site-footer-meta"><?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?> - Desenvolvido por kaiten</span>
+                        <span class="site-footer-meta"><?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?> - Desenvolvido por <a target="_blank" href="https://codevux.com">codevux</a></span>
                     </div>
                 </div>
             </div>
