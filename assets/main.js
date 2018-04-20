@@ -2,6 +2,7 @@
 
     //Mobile Menu
     $('#mobile-menu-icon').click(function() {
+        $(this).toggleClass('mobile-menu-icon__activate');
         $('.menu-links').toggleClass('mobile-open');
     })
 
