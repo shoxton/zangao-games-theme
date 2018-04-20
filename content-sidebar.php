@@ -5,8 +5,9 @@
     ); 
     $recentNews = new WP_Query($args);
 ?>
-<h2 class="archive-posts-header">Posts recentes</h2>
 <?php if($recentNews->have_posts()) : ?>
+<h2 class="archive-posts-header">Posts recentes</h2>
+
     <?php while ($recentNews->have_posts()) : $recentNews->the_post(); ?>
     <div style="background: url(<?php the_post_thumbnail_url(); ?>);" class="post-box">
         <div class="post-box-overlay">
@@ -19,10 +20,7 @@
         </div>
     </div>
     <?php endwhile; ?>
-    <?php else : ?> 
-            <div class="col-12">
-                <?php get_template_part('content', 'not-found'); ?>
-            </div>
+
 
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
