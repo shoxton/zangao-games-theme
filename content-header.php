@@ -1,9 +1,11 @@
 <?php if(is_front_page()) { ?>
-    <div class="highlight-carousel">
+    
         <?php 
             $highlights = new WP_Query( array( 'post_type' => 'highlights' ) );
         ?>
         <?php if ($highlights->have_posts()) : ?>
+
+        <div class="highlight-carousel">
             
             <?php while ($highlights->have_posts()) : $highlights->the_post(); ?>
                 <div class="highlight-item" style="background: url(<?php the_field('highlightImage') ;?>)">
@@ -30,13 +32,20 @@
                     </div>
                 </div>
             <?php endwhile; ?>
+        </div>
 
             <?php else : ?> 
-                <div class="row">
-                    <?php get_template_part('content', 'not-found'); ?>
+                <div class="site-header">
+                    <div class="site-header-banner" style="background: url(<?php header_image(); ?>);"></div>
+                    <div class="site-header-content custom-link">
+                        <div class="site-header-text">
+                            <a href="<?php echo home_url(); ?>"><h1><?php bloginfo('name'); ?></h1></a>
+                            <h5><?php bloginfo('description'); ?></h5>
+                        </div>
+                    </div>
                 </div>
         <?php endif; ?>
-    </div>
+    
 <?php } else { ?>
     <div class="site-header">
         <div class="site-header-banner" style="background: url(<?php header_image(); ?>);"></div>
