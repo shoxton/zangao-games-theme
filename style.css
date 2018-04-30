@@ -1060,6 +1060,9 @@ button:hover {
     .single iframe {
         height: auto;
     }
+    .post-nav .col-sm-6:last-child {
+        margin-top: 15px;
+    }
 }
 
 .post-nav {
@@ -1071,6 +1074,8 @@ button:hover {
     position: relative;
     z-index: 5;
     height: 100%;
+    background-position: center!important;
+    background-size: cover!important;
 }
 
 .item-post-nav:after {
@@ -1080,7 +1085,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .8);
     z-index: -5;
 }
 
