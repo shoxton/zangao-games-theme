@@ -1,7 +1,7 @@
 <?php
 
 function theme_styles() {
-    wp_enqueue_style('style', get_stylesheet_uri(), array(), 30042018, 'all');
+    wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
     wp_enqueue_style('google-custom-font', '//fonts.googleapis.com/css?family=Roboto:300,400,700|Titillium+Web:300,400,700');
     wp_enqueue_style('slick-slider-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css');
