@@ -1580,3 +1580,63 @@ del {
 .rtl table caption {
 	text-align: right;
 }
+
+#respond { 
+    background: #f0f0f0;
+    padding: 20px 25px;
+    margin-top: 15px;
+}
+
+#respond p {
+    display: flex;
+    flex-direction: column;
+}
+
+#respond p label {
+    display: block;
+    font-size: 12px;
+}
+
+#respond p input, #respond p textarea {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #a1a1a1;
+}
+
+#respond p input:focus, #respond p textarea:focus {
+    outline: none;
+    border: 2px solid #757575;
+}
+
+#respond #submit {
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    background: #E94B3C;
+    cursor: pointer;
+    max-width: 300px;
+}
+
+h3#comments {
+    font-size: 16px;
+    color: #a1a1a1;
+    margin-top: 15px;
+}
+
+ol.commentlist li article {
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+ol.commentlist li article footer .comment-metadata a {
+    font-size: 12px;
+    color: #a3a3a3;
+}
+
+ol.commentlist li article footer .comment-author img {
+    margin-left: -7px;
+}
+
+ol.commentlist li article .reply a {
+    color: #
+}
