@@ -123,7 +123,7 @@ h2 {font-size: 36px;}
 h3 {font-size: 24px;}
 h4 {font-size: 18px;}
 h5, a {font-size: 16px;}
-p {font-size: 16px; color: #777;line-height: 1.6471}
+p {font-size: 16px; color: rgb(59, 59, 59);line-height: 1.6471}
 
 @media screen and (max-width: 992px) {
     h2 {font-size: 24px!important;}
@@ -1033,6 +1033,35 @@ button:hover {
     .single-header .single-meta, .single-header .single-meta span {display: block;}
 }
 
+.single iframe {
+    width: 100%;
+    height: 420px;
+}
+
+@media screen and (max-width: 1200px) {
+    .single iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .single iframe {
+        height: 345px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .single iframe {
+        height: 260px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .single iframe {
+        height: auto;
+    }
+}
+
 /* Search */
 
 .input-con {
@@ -1635,8 +1664,4 @@ ol.commentlist li article footer .comment-metadata a {
 
 ol.commentlist li article footer .comment-author img {
     margin-left: -7px;
-}
-
-ol.commentlist li article .reply a {
-    color: #
 }
