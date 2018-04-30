@@ -22,6 +22,10 @@
                     </div>
 
             <?php endif; ?>
+        <?php if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;
+        ?>
         </div>
         <div class="col-12 col-lg-4 col-xl-3">
             <?php get_template_part('content', 'sidebar'); ?>
