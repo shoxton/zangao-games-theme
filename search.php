@@ -11,16 +11,17 @@
                 <div class="col-12 col-sm-6 col-lg-6 col-xl-4 col-margin">
                     <?php get_template_part('content'); ?>
                 </div>
-
                 <?php endwhile; ?>
 
-                <?php else : ?> 
+            </div>
+                <?php else : ?>
+                <div class="row">
                     <div class="col-12">
                         <?php get_template_part('content', 'not-found'); ?>
                     </div>
+                </div> 
 
             <?php endif; ?>
-            </div>
             
             <div class="pagination">
                 <?php echo paginate_links(); ?>
