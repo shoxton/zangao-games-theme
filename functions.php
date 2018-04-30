@@ -115,8 +115,8 @@ add_action('widgets_init', 'loadWidgets');
 
 
 function change_tag_cloud_font_sizes( array $args ) {
-    $args['smallest'] = '12';
-    $args['largest'] = '12';
+    $args['smallest'] = '10';
+    $args['largest'] = '10';
 
     return $args;
 }
@@ -135,6 +135,4 @@ if (!is_admin()) {
     add_filter('pre_get_posts','wpb_search_filter');
 
 };
-
-
 
