@@ -56,7 +56,7 @@
                         <div class="col-lg-8">
                             <div class="row full-height-posts-row">
                                 <?php 
-                                    $recentUpdates = new WP_Query( array( 'category_name' => 'updates', 'posts_per_page' => 3 ) );
+                                    $recentUpdates = new WP_Query( array( 'category_name' => 'news', 'posts_per_page' => 3 ) );
                                 ?>
                                 <?php if($recentUpdates->have_posts()) : ?>
                                     <?php while ($recentUpdates->have_posts()) : $recentUpdates->the_post(); ?>
@@ -83,7 +83,7 @@
                         <div class="col-lg-4">
                             <div class="row aside-news-col">
                                 <?php 
-                                    $recentNews = new WP_Query( array( 'category_name' => 'news', 'posts_per_page' => 3 ) );
+                                    $recentNews = new WP_Query( array( 'category_name' => 'tutorials', 'posts_per_page' => 3 ) );
                                 ?>
                                 <?php if($recentNews->have_posts()) : ?>
                                     <?php while ($recentNews->have_posts()) : $recentNews->the_post(); ?>
