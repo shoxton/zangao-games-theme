@@ -1,5 +1,6 @@
 (function($) {
 
+    var apiKey = 'AIzaSyAJLwSRq5p67py_CFpnxNtpw2ShSkWM8tQ';
     //Youtube requests
     $(document).ready(function(){
         channelData();
@@ -9,7 +10,7 @@
         function channelData() {
 
             var channelContainer = document.getElementById('channel-thumb');
-            var youtubeDataAPIChannelEndPoint = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&id=UC8racR0Ko9HzKpIBAPvifKw&key=AIzaSyAB24gSnrYT525YIvEVB54XUP3GPnrmudY';
+            var youtubeDataAPIChannelEndPoint = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&id=UC8racR0Ko9HzKpIBAPvifKw&key=' + apiKey + '';
 
             var youtubeDataAPI = new XMLHttpRequest();
             youtubeDataAPI.open('GET', youtubeDataAPIChannelEndPoint );
@@ -39,7 +40,7 @@
         function getDefault() {
 
             var liveContainer = document.getElementById('live-container');
-            var youtubeDataAPIDefaultEndPoint = 'https://www.googleapis.com/youtube/v3/activities?part=id,snippet,contentDetails&maxResults=4&channelId=UC8racR0Ko9HzKpIBAPvifKw&key=AIzaSyAB24gSnrYT525YIvEVB54XUP3GPnrmudY';
+            var youtubeDataAPIDefaultEndPoint = 'https://www.googleapis.com/youtube/v3/search?part=id,snippet&channelId=UC8racR0Ko9HzKpIBAPvifKw&maxResults=4&order=date&type=video&key=' + apiKey + '';
 
             var youtubeDataAPI = new XMLHttpRequest();
             youtubeDataAPI.open('GET', youtubeDataAPIDefaultEndPoint );
@@ -61,10 +62,10 @@
                 var defaultString = '';
                 for(var i=0; i<defaultData.length; i++) {
                     defaultString = '<div class="video-tag">' + '<span>Novo</span>' + '</div>'+
-                                    '<iframe width="100%" height="280" src="https://www.youtube.com/embed/' + defaultData[0].contentDetails.upload.videoId + '?autoplay=1" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
+                                    '<iframe width="100%" height="280" src="https://www.youtube.com/embed/' + defaultData[0].id.videoId + '?autoplay=1" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
                                     '<div class="iframe-text">'+
-                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + defaultData[0].contentDetails.upload.videoId + '">' + '<h4 class="ellipsis">' + defaultData[0].snippet.title + '</h4>' + '</a>' + 
-                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + defaultData[0].contentDetails.upload.videoId + '">Assistir no youtube	&rarr;</a>'+ 
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + defaultData[0].id.videoId + '">' + '<h4 class="ellipsis">' + defaultData[0].snippet.title + '</h4>' + '</a>' + 
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + defaultData[0].id.videoId + '">Assistir no youtube	&rarr;</a>'+ 
                                     '</div>';
                 }
 
@@ -74,7 +75,7 @@
 
         function getLive() {
             var liveContainer = document.getElementById('live-container');
-            var youtubeDataAPILiveEndPoint = 'https://www.googleapis.com/youtube/v3/search?part=id%2Csnippet&channelId=UC8racR0Ko9HzKpIBAPvifKw&eventType=live&type=video&key=AIzaSyAB24gSnrYT525YIvEVB54XUP3GPnrmudY';
+            var youtubeDataAPILiveEndPoint = 'https://www.googleapis.com/youtube/v3/search?part=id,snippet&channelId=UC8racR0Ko9HzKpIBAPvifKw&eventType=live&type=video&key=' + apiKey + '';
 
             var youtubeDataAPI = new XMLHttpRequest();
             youtubeDataAPI.open('GET', youtubeDataAPILiveEndPoint );
@@ -115,7 +116,7 @@
         function getVideos() {
 
             var videosContainer = document.getElementById('videos-container');
-            var youtubeDataAPIEndPoint = 'https://www.googleapis.com/youtube/v3/activities?part=id,snippet,contentDetails&maxResults=4&channelId=UC8racR0Ko9HzKpIBAPvifKw&key=AIzaSyAB24gSnrYT525YIvEVB54XUP3GPnrmudY';
+            var youtubeDataAPIEndPoint = 'https://www.googleapis.com/youtube/v3/search?part=id,snippet&channelId=UC8racR0Ko9HzKpIBAPvifKw&maxResults=4&order=date&type=video&key=' + apiKey + '';
 
             var youtubeDataAPI = new XMLHttpRequest();
             youtubeDataAPI.open('GET', youtubeDataAPIEndPoint );
@@ -138,10 +139,10 @@
                 for(var i=0; i<videosData.length; i++) {
                     videosString += '<div class="col-12 col-md-6 col-lg-3">'+
                                     '<div class="iframe-card">'+
-                                    '<iframe width="100%" height="150" src="https://www.youtube.com/embed/' + videosData[i].contentDetails.upload.videoId + '" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
+                                    '<iframe width="100%" height="150" src="https://www.youtube.com/embed/' + videosData[i].id.videoId + '" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
                                     '<div class="iframe-text">'+
-                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + videosData[i].contentDetails.upload.videoId + '">' + '<h4 class="ellipsis">' + videosData[i].snippet.title + '</h4>' + '</a>' + 
-                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + videosData[i].contentDetails.upload.videoId + '">Assistir no youtube &rarr;</a>'+ 
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + videosData[i].id.videoId + '">' + '<h4 class="ellipsis">' + videosData[i].snippet.title + '</h4>' + '</a>' + 
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=' + videosData[i].id.videoId + '">Assistir no youtube &rarr;</a>'+ 
                                     '</div>'+
                                     '</div>'+
                                     '</div>';
