@@ -53,40 +53,13 @@
                 </div>
                 <div class="news-container">
                     <div class="row">
-                        <div class="col-lg-8">
-                            <div class="row full-height-posts-row">
-                                <?php 
-                                    $recentUpdates = new WP_Query( array( 'category_name' => 'news', 'posts_per_page' => 3 ) );
-                                ?>
-                                <?php if($recentUpdates->have_posts()) : ?>
-                                    <?php while ($recentUpdates->have_posts()) : $recentUpdates->the_post(); ?>
-                                        <div style="background: url(<?php the_post_thumbnail_url(); ?>);" class="post-box-full-height post-box">
-                                            <div class="post-box-overlay">
-                                                <div class="post-categories">
-                                                    <span class="category-link"><?php the_category(' ');?></span>
-                                                </div>
-                                                <div class="post-box-title">
-                                                    <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php endwhile; ?>
-                                    <?php else : ?> 
-                                            <div class="col-12">
-                                                <?php get_template_part('content', 'not-found'); ?>
-                                            </div>
-
-                                <?php endif; ?>
-                                <?php wp_reset_postdata(); ?>
-                            </div>
-                        </div>
                         <div class="col-lg-4">
-                            <div class="row aside-news-col">
-                                <?php 
-                                    $recentNews = new WP_Query( array( 'category_name' => 'tutorials', 'posts_per_page' => 3 ) );
-                                ?>
-                                <?php if($recentNews->have_posts()) : ?>
-                                    <?php while ($recentNews->have_posts()) : $recentNews->the_post(); ?>
+                            
+                            <?php 
+                                $recentUpdates = new WP_Query( array( 'category_name' => 'news', 'posts_per_page' => 3 ) );
+                            ?>
+                            <?php if($recentUpdates->have_posts()) : ?>
+                                <?php while ($recentUpdates->have_posts()) : $recentUpdates->the_post(); ?>
                                     <div style="background: url(<?php the_post_thumbnail_url(); ?>);" class="post-box">
                                         <div class="post-box-overlay">
                                             <div class="post-categories">
@@ -97,15 +70,74 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <?php endwhile; ?>
-                                    <?php else : ?> 
-                                            <div class="col-12">
-                                                <?php get_template_part('content', 'not-found'); ?>
-                                            </div>
+                                <?php endwhile; ?>
+                                <?php else : ?> 
+                                        <div class="col-12">
+                                            <?php get_template_part('content', 'not-found'); ?>
+                                        </div>
 
-                                <?php endif; ?>
-                                <?php wp_reset_postdata(); ?>
-                            </div>
+                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
+                            
+                        </div>
+                        <div class="col-lg-4">
+                            
+                            <?php 
+                                $recentUpdates = new WP_Query( array( 'category_name' => 'tutorials', 'posts_per_page' => 3 ) );
+                            ?>
+                            <?php if($recentUpdates->have_posts()) : ?>
+                                <?php while ($recentUpdates->have_posts()) : $recentUpdates->the_post(); ?>
+                                    <div style="background: url(<?php the_post_thumbnail_url(); ?>);" class="post-box">
+                                        <div class="post-box-overlay">
+                                            <div class="post-categories">
+                                                <span class="category-link"><?php the_category(' ');?></span>
+                                            </div>
+                                            <div class="post-box-title">
+                                                <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                                <?php else : ?> 
+                                        <div class="col-12">
+                                            <?php get_template_part('content', 'not-found'); ?>
+                                        </div>
+
+                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
+                            
+                        </div>
+                        <div class="col-lg-4">
+                            
+                            <?php 
+                                $recentUpdates = new WP_Query( array( 'category_name' => 'updates', 'posts_per_page' => 3 ) );
+                            ?>
+                            <?php if($recentUpdates->have_posts()) : ?>
+                                <?php while ($recentUpdates->have_posts()) : $recentUpdates->the_post(); ?>
+                                    <div style="background: url(<?php the_post_thumbnail_url(); ?>);" class="post-box">
+                                        <div class="post-box-overlay">
+                                            <div class="post-categories">
+                                                <span class="category-link"><?php the_category(' ');?></span>
+                                            </div>
+                                            <div class="post-box-title">
+                                                <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                                <?php else : ?> 
+                                        <div class="col-12">
+                                            <?php get_template_part('content', 'not-found'); ?>
+                                        </div>
+
+                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="<?php echo home_url() ;?>/blog"><button class="watch-more-btn">Veja mais</button></a>
                         </div>
                     </div>
 

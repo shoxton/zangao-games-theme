@@ -153,6 +153,10 @@ button {
     cursor: pointer;
 }
 
+.watch-more-btn {
+    margin-top: 15px;
+}
+
 .yt-button {
     padding-top: 6%;
 }
@@ -611,10 +615,6 @@ button:hover {
     border-bottom: 5px solid #E94B3C;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     margin-bottom: 15px;
-}
-
-.post-box:last-child {
-    margin-bottom: 0;
 }
 
 .post-box-full-height {
