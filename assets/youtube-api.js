@@ -62,7 +62,7 @@
                 var defaultString = '';
                 for(var i=0; i<defaultData.length; i++) {
                     defaultString = '<div class="video-tag">' + '<span>Novo</span>' + '</div>'+
-                                    '<iframe width="100%" height="280" src="https://www.youtube.com/embed/' + defaultData[0].id.videoId + '?autoplay=1" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
+                                    '<iframe width="100%" height="280" src="https://www.youtube.com/embed/' + defaultData[0].id.videoId + '" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
                                     '<div class="iframe-text">'+
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=' + defaultData[0].id.videoId + '">' + '<h4 class="ellipsis">' + defaultData[0].snippet.title + '</h4>' + '</a>' + 
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=' + defaultData[0].id.videoId + '">Assistir no youtube	&rarr;</a>'+ 
@@ -102,7 +102,7 @@
                 var liveString = '';
                 for(var i=0; i<liveData.length; i++) {
                     liveString +=   '<div class="video-tag">' + '<div id="live-on-icon"><i class="fas fa-circle"></i></div>' + '<span>ao vivo</span>' + '</div>'+
-                                    '<iframe width="100%" height="280" src="https://www.youtube.com/embed/' + liveData[i].id.videoId + '?autoplay=1" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
+                                    '<iframe width="100%" height="280" src="https://www.youtube.com/embed/' + liveData[i].id.videoId + '" frameborder="0" encrypted-media" allowfullscreen></iframe>'+
                                     '<div class="iframe-text">'+
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=' + liveData[i].id.videoId + '">' + '<h4 class="ellipsis">' + liveData[i].snippet.title + '</h4>' + '</a>' + 
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=' + liveData[i].id.videoId + '">Assistir no youtube &rarr;</a>'+ 
