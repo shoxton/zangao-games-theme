@@ -58,6 +58,7 @@
             </script>
         </div>
     </div>
+    <?php get_template_part('content', 'index'); ?>
 
 <?php get_footer(); ?>
 
