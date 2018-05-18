@@ -72,6 +72,11 @@
                                         </div>
                                     </div>
                                 <?php endwhile; ?>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a href="<?php echo home_url() ;?>/category/news"><button class="watch-more-btn">Veja mais notícias</button></a>
+                                    </div>
+                                </div>
                                 <?php else : ?> 
                                         <div class="col-12">
                                             <?php get_template_part('content', 'not-found'); ?>
@@ -99,6 +104,11 @@
                                         </div>
                                     </div>
                                 <?php endwhile; ?>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a href="<?php echo home_url() ;?>/category/tutorials"><button class="watch-more-btn">Veja mais tutoriais</button></a>
+                                    </div>
+                                </div>
                                 <?php else : ?> 
                                         <div class="col-12">
                                             <?php get_template_part('content', 'not-found'); ?>
@@ -126,6 +136,12 @@
                                         </div>
                                     </div>
                                 <?php endwhile; ?>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a href="<?php echo home_url() ;?>/category/updates"><button class="watch-more-btn">Veja mais atualizações</button></a>
+                                    </div>
+                                </div>
+
                                 <?php else : ?> 
                                         <div class="col-12">
                                             <?php get_template_part('content', 'not-found'); ?>
@@ -134,11 +150,6 @@
                             <?php endif; ?>
                             <?php wp_reset_postdata(); ?>
                             
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="<?php echo home_url() ;?>/blog"><button class="watch-more-btn">Veja mais</button></a>
                         </div>
                     </div>
 
