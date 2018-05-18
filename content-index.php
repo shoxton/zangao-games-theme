@@ -54,6 +54,7 @@
                 <div class="news-container">
                     <div class="row">
                         <div class="col-lg-4">
+                            <h3 class="lighted-posts-title">Notícias</h3>
                             
                             <?php 
                                 $recentUpdates = new WP_Query( array( 'category_name' => 'news', 'posts_per_page' => 3 ) );
@@ -81,7 +82,7 @@
                             
                         </div>
                         <div class="col-lg-4">
-                            
+                            <h3 class="lighted-posts-title">Tutoriais</h3>
                             <?php 
                                 $recentUpdates = new WP_Query( array( 'category_name' => 'tutorials', 'posts_per_page' => 3 ) );
                             ?>
@@ -108,7 +109,7 @@
                             
                         </div>
                         <div class="col-lg-4">
-                            
+                            <h3 class="lighted-posts-title">Atualizações</h3>
                             <?php 
                                 $recentUpdates = new WP_Query( array( 'category_name' => 'updates', 'posts_per_page' => 3 ) );
                             ?>

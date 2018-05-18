@@ -1719,3 +1719,17 @@ ol.commentlist li article footer .comment-author img {
     font-size: 9px;
     color: #707070;
 }
+
+.lighted-posts-title {
+    color: #fff;
+    background: #361a36;
+    font-size: 18px;
+    padding: 15px 20px;
+    border-left: 6px solid #E94B3C;
+}
+
+@media screen and (max-width: 992px) {
+    .lighted-posts-title {
+        margin-top: 30px;
+    }
+}
