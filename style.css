@@ -1708,6 +1708,7 @@ ol.commentlist li article footer .comment-author img {
 
 #ads-container {
     position: relative;
+    padding: 2rem!important;
 }
 
 #ads-container::before {
