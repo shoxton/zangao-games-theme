@@ -5,6 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+    "palette": {
+        "popup": {
+        "background": "#212121"
+        },
+        "button": {
+        "background": "#e94b3c"
+        }
+    },
+    "theme": "edgeless",
+    "content": {
+        "message": "Este site utiliza cookies para garantir que você obtenha uma melhor experiência em nosso site.",
+        "dismiss": "OK",
+        "link": "Saiba mais",
+        "href": "https://policies.google.com/technologies/partner-sites"
+    }
+    })});
+    </script>
+
 </head>
 <body <?php body_class(); ?>>
 

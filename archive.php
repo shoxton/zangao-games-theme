@@ -1,18 +1,20 @@
 <?php get_header(); ?>
 
 <div class="page-con container">
-    <!-- Advertise box -->
-    <div class="col-12 jumbotron" id="ads-container">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- General Ads Block -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-2749150033363966"
-            data-ad-slot="7203047923"
-            data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+    <div class="row">
+        <!-- Advertise box -->
+        <div class="ads-container">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- General Ads Block -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-2749150033363966"
+                data-ad-slot="7203047923"
+                data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </div>
     <div class="row">
         <div class="col-12 col-lg-8 col-xl-9">
@@ -58,18 +60,20 @@
             <?php get_template_part('content', 'sidebar'); ?>
         </div>
     </div>
-    <!-- Advertise box -->
-    <div class="col-12 jumbotron" id="ads-container">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- General Ads Block -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-2749150033363966"
-            data-ad-slot="7203047923"
-            data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+    <div class="row">
+        <!-- Advertise box -->
+        <div class="ads-container">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- General Ads Block -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-2749150033363966"
+                data-ad-slot="7203047923"
+                data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </div>
 </div>
 
