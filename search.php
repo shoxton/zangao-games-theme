@@ -24,7 +24,11 @@
             <?php endif; ?>
             
             <div class="pagination">
-                <?php echo paginate_links(); ?>
+                <?php echo paginate_links([
+                    "mid_size" => 0,
+                    "prev_text" => "&#171;",
+                    "next_text" => "&#187;"
+                ]); ?>
             </div>
         </div>
         <div class="col-12 col-lg-4 col-xl-3">

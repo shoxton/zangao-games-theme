@@ -1232,24 +1232,32 @@ li.widget .widgettitle {
 
 /* Pagination */
 
+.pagination {
+    margin-bottom: 30px;
+}
+
 .pagination a, .pagination span  {
     background: #E94B3C;
-    padding: 15px 20px;
+    padding: 8px 16px;
     color: #fff;
     margin-right: 5px;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 4px -2px #d9291979;
 }
 
 .pagination a:hover {
     text-decoration: none;
     background: #d92919;
     color: #fff;
+    box-shadow: 0 2px 8px #d9291979;
 }
 
 .pagination .current {
     background: #a1a1a1;
-    font-size: 16px;
-    font-weight: bold;
+    box-shadow: none;
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, .2);
 }
 /*
 Theme Name: Zangão Games Theme

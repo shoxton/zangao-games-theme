@@ -40,7 +40,11 @@
             </div>
 
             <div class="pagination">
-                <?php echo paginate_links(); ?>
+                <?php echo paginate_links([
+                    "mid_size" => 0,
+                    "prev_text" => "&#171;",
+                    "next_text" => "&#187;"
+                ]); ?>
             </div>
             
         </div>
