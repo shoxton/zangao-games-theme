@@ -1731,3 +1731,27 @@ ol.commentlist li article footer .comment-author img {
     padding: 15px 20px;
     border-left: 6px solid #fff;
 }
+
+
+.widget_categories {
+    padding: 0!important;
+}
+
+.widget_categories h2 {
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.widget_categories ul li.cat-item a {
+    display: block;
+    background: #fff;
+    padding: 10px 20px;
+    border-top: 1px solid #eaeaea;
+    text-decoration: none;
+}
+
+.widget_categories ul li.cat-item a:hover {
+    text-decoration: none;
+    background: #fcfcfc;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .05);
+}
