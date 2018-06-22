@@ -48,6 +48,14 @@
                             );
                         ?>
                         <?php wp_nav_menu( $args ); ?>
+
+                        <div class="social-links">
+                            <a href="https://facebook.com/zangaogamesoficial"><i class="fab fa-facebook-square"></i></a>
+                            <a href="https://www.youtube.com/channel/UC8racR0Ko9HzKpIBAPvifKw"><i class="fab fa-youtube-square"></i></a>
+                            <a href="https://twitter.com/3duardoaniceto"><i class="fab fa-twitter-square"></i></a>
+                            <a href="https://instagram.com/zangaogames"><i class="fab fa-instagram"></i></a>
+                       </div>
+
                     </div>
                     <a id="mobile-menu-icon" href="#"><i class="fas fa-bars"></i></a>
                 </div>
