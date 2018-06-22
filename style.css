@@ -1253,6 +1253,10 @@ li.widget .widgettitle {
     align-items: center;
 }
 
+.about-author .author-info .author-pic {
+    border: 3px solid #fff;
+}
+
 .about-author .author-info .author-desc {
     padding-left: 20px;
 }

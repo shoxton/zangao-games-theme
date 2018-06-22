@@ -13,14 +13,14 @@
                             <?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?>
                         </div>
                         <div class="author-desc">
-                            <a href="<?php echo $curauth->user_url; ?>" target="_blank" ><h4><?php echo $curauth->nickname; ?></h4></a>
+                            <h4><?php echo $curauth->display_name; ?></h4>
                             <?php echo $curauth->user_description; ?>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <h2 class="archive-posts-header">Postagens de <?php echo $curauth->nickname; ?></h2>
+            <h2 class="archive-posts-header">Postagens de <?php echo $curauth->display_name; ?></h2>
             <div class="d-flex row">
                 <?php if (have_posts()) : ?>
                     
