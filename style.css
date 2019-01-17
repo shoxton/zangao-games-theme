@@ -1446,7 +1446,7 @@ big {
 .single-text ul,
 .single-text ol {
 	margin: 0 0 28px 0;
-	padding: 0 0 0 10%;
+	padding: 0;
 }
 
 .single-text ul {
