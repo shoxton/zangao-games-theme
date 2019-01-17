@@ -1539,14 +1539,12 @@ del {
 
 .single-text a {
 	border-bottom: 1px solid #333;
-	color: #333;
 	text-decoration: none;
 }
 
 .single-text a:hover  {
     text-decoration: none;
     border-bottom: 1px solid #d92919;
-	color: #d92919;
 }
 
 
